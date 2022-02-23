@@ -1,8 +1,26 @@
-.card{
+.element-link {
+  text-decoration: none;
+
+}
+
+.element-link:hover {
+  .card {
+    border: 1px solid #ba68c8;
+    transform: translateY(-5px);
+
+  }
+
+}
+
+.card {
   margin-top: 8px;
   margin-bottom: 8px;
-  img{
+  color: black;
+  transition: transform 0.5s;
+  height: 400px;
+  overflow: hidden;
+  img {
     height: 170px;
-    object-fit:cover;
+    object-fit: cover;
   }
 }

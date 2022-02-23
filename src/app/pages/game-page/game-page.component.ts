@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute} from "@angular/router";
+import {GameService} from "../../services/game.service";
+import {Game} from "../../models/game";
 
 @Component({
   selector: 'app-game-page',
@@ -7,9 +10,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GamePageComponent implements OnInit {
 
-  constructor() { }
+  game!: Game;
+
+  constructor(private route: ActivatedRoute, private gameService: GameService) {
+
+
+  }
 
   ngOnInit(): void {
+    this.route.params.subscribe(params => {
+      const {id} = params;
+
+      this.gameService.getGameById(id).subscribe(res => {
+        this.game = res;
+      })
+
+    })
   }
 
 }
