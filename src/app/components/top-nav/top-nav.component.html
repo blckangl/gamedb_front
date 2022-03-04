@@ -23,7 +23,9 @@
             </a>
             <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
               <li *ngFor="let category of categories"><a class="dropdown-item"
-                                                         href="#{{category.id}}">{{category.title}}</a></li>
+                                                         [routerLink]="['result']"
+                                                         [queryParams]="{categoryId:category.id}">{{category.title}}</a>
+              </li>
 
             </ul>
           </li>
@@ -43,7 +45,8 @@
               Platforms
             </a>
             <ul class="dropdown-menu" aria-labelledby="platfromsDropDown">
-              <li *ngFor="let platform of platforms"><a class="dropdown-item" href="#{{platform.id}}">{{platform.title}}</a></li>
+              <li *ngFor="let platform of platforms"><a class="dropdown-item"
+                                                        href="#{{platform.id}}">{{platform.title}}</a></li>
 
             </ul>
           </li>

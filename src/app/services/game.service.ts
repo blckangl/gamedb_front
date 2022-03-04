@@ -15,6 +15,10 @@ export class GameService {
   constructor(private http: HttpClient) {
   }
 
+  getFiltredResult(catId: number): Observable<Array<Game>> {
+    return this.http.get<Array<Game>>(`${environment.url}/games/filter/${catId}`)
+
+  }
 
   getRecentlyAddedGames(): Observable<Array<Game>> {
     return this.http.get<Array<Game>>(`${environment.url}/games/added`)

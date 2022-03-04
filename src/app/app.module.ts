@@ -10,6 +10,7 @@ import {GameListComponent} from './components/game-list/game-list.component';
 import {GameElementComponent} from './components/game-element/game-element.component';
 import {HttpClientModule} from "@angular/common/http";
 import { GamePageComponent } from './pages/game-page/game-page.component';
+import { ResultPageComponent } from './pages/result-page/result-page.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { GamePageComponent } from './pages/game-page/game-page.component';
     TopNavComponent,
     GameListComponent,
     GameElementComponent,
-    GamePageComponent
+    GamePageComponent,
+    ResultPageComponent
   ],
   imports: [
     BrowserModule,
