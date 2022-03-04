@@ -1,7 +1,16 @@
+import {Genre} from "./genre";
+import {Platform} from "./platform";
+import {Category} from "./category";
+
 export interface Game {
-  uuid: number;
+  id: number;
   title: string;
   description: string;
-  cover_picture: string;
+  coverPicture: string;
   picture: string;
+  genres: Array<Genre>;
+  platforms: Array<Platform>;
+  categories: Array<Category>;
+  createdAt: Date;
+  releaseDate: Date;
 }

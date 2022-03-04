@@ -13,8 +13,11 @@ export class GameService {
   }
 
 
-  getGames(): Observable<Array<Game>> {
-    return this.http.get<Array<Game>>(`${environment.url}/games`)
+  getRecentlyAddedGames(): Observable<Array<Game>> {
+    return this.http.get<Array<Game>>(`${environment.url}/games/added`)
+  }
+  getRecentlyReleasedGames(): Observable<Array<Game>> {
+    return this.http.get<Array<Game>>(`${environment.url}/games/released`)
   }
   getGameById(id:number): Observable<Game> {
     return this.http.get<Game>(`${environment.url}/games/${id}`)

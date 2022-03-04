@@ -1,7 +1,7 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-12 p-0">
-      <img class="img-cover" [src]="game?.cover_picture" alt="">
+      <img class="img-cover" [src]="game?.coverPicture" alt="">
     </div>
   </div>
   <div class="row justify-content-between mt-5">
@@ -11,6 +11,22 @@
     <div class="col-8">
       <h3>{{game?.title}}</h3>
       <p class="text-justify">{{game?.description}}</p>
+      <div class="row">
+        <div class="col-6">
+          <strong>Categories: </strong>
+          <span *ngFor="let category of game.categories">{{category.title}} </span>
+        </div>
+        <div class="col-6">
+          <strong>Genres: </strong>
+          <span *ngFor="let genre of game.genres">{{genre.title}} </span>
+        </div>
+      </div>
+      <div class="row platforms">
+        <div *ngFor="let platform of game.platforms" class="col-4">
+          <img class="platform" [src]="platform.image" />
+        </div>
+      </div>
     </div>
   </div>
+
 </div>
