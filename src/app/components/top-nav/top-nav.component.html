@@ -1,57 +1,108 @@
 <section>
   <nav class="navbar navbar-expand-lg navbar-dark bg-nav">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <a class="navbar-brand" href="#">GameDb</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
+        <div class="d-flex">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+            #searchTerm
+            (keyup.enter)="searchByTerm(searchTerm)"
+          />
+          <button
+            (click)="searchByTerm(searchTerm)"
+            class="btn btn-outline-success"
+            type="submit"
+          >
+            Search
+          </button>
+        </div>
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
 
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" role="button" data-bs-toggle="dropdown"
-               aria-expanded="false">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="categoriesDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
               Categories
             </a>
             <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
-              <li *ngFor="let category of categories"><a class="dropdown-item"
-                                                         [routerLink]="['result']"
-                                                         [queryParams]="{categoryId:category.id}">{{category.title}}</a>
+              <li *ngFor="let category of categories">
+                <a
+                  class="dropdown-item"
+                  [routerLink]="['result']"
+                  [queryParams]="{ categoryId: category.id }"
+                  >{{ category.title }}</a
+                >
               </li>
-
             </ul>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="genresDropDown" role="button" data-bs-toggle="dropdown"
-               aria-expanded="false">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="genresDropDown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
               Genres
             </a>
             <ul class="dropdown-menu" aria-labelledby="genresDropDown">
-              <li *ngFor="let genre of genres"><a class="dropdown-item" href="#{{genre.id}}">{{genre.title}}</a></li>
-
+              <li *ngFor="let genre of genres">
+                <a
+                  class="dropdown-item"
+                  [routerLink]="['result']"
+                  [queryParams]="{ genreId: genre.id }"
+                  >{{ genre.title }}</a
+                >
+              </li>
             </ul>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="platfromsDropDown" role="button" data-bs-toggle="dropdown"
-               aria-expanded="false">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="platfromsDropDown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
               Platforms
             </a>
             <ul class="dropdown-menu" aria-labelledby="platfromsDropDown">
-              <li *ngFor="let platform of platforms"><a class="dropdown-item"
-                                                        href="#{{platform.id}}">{{platform.title}}</a></li>
-
+              <li *ngFor="let platform of platforms">
+                <a
+                  class="dropdown-item"
+                  [routerLink]="['result']"
+                  [queryParams]="{ platformId: platform.id }"
+                  >{{ platform.title }}</a
+                >
+              </li>
             </ul>
           </li>
         </ul>
-
       </div>
     </div>
   </nav>
