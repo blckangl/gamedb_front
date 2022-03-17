@@ -1,0 +1,89 @@
+<section>
+  <p>
+    <button
+      class="btn btn-primary"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#filters"
+      aria-expanded="false"
+      aria-controls="collapseExample"
+    >
+      Filters
+    </button>
+  </p>
+  <div class="collapse show" id="filters">
+    <div class="card card-body">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-4">
+            Platforms:
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="platforms"
+                id="platform"
+              />
+              <label class="form-check-label" for="platform"> none </label>
+            </div>
+            <div class="form-check" *ngFor="let platform of platforms">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="platforms"
+                id="platform{{ platform.id }}"
+              />
+              <label class="form-check-label" for="platform{{ platform.id }}">
+                {{ platform.title }}
+              </label>
+            </div>
+          </div>
+          <div class="col-4">
+            Categories:
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="categories"
+                id="category"
+              />
+              <label class="form-check-label" for="category"> none </label>
+            </div>
+            <div class="form-check" *ngFor="let category of categories">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="categories"
+                id="platform{{ category.id }}"
+              />
+              <label class="form-check-label" for="platform{{ category.id }}">
+                {{ category.title }}
+              </label>
+            </div>
+          </div>
+          <div class="col-4">
+            Genres:
+            <input
+              class="form-check-input"
+              type="radio"
+              name="genres"
+              id="genre"
+            />
+            <label class="form-check-label" for="genre"> none </label>
+          </div>
+          <div class="form-check" *ngFor="let genre of genres">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="genres"
+              id="genre{{ genre.id }}"
+            />
+            <label class="form-check-label" for="genre{{ genre.id }}">
+              {{ genre.title }}
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

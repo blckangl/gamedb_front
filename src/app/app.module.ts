@@ -11,6 +11,7 @@ import {GameElementComponent} from './components/game-element/game-element.compo
 import {HttpClientModule} from "@angular/common/http";
 import { GamePageComponent } from './pages/game-page/game-page.component';
 import { ResultPageComponent } from './pages/result-page/result-page.component';
+import { FiltersComponent } from './components/filters/filters.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ResultPageComponent } from './pages/result-page/result-page.component';
     GameListComponent,
     GameElementComponent,
     GamePageComponent,
-    ResultPageComponent
+    ResultPageComponent,
+    FiltersComponent
   ],
   imports: [
     BrowserModule,
