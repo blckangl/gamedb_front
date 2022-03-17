@@ -1,6 +1,12 @@
 <section>
   <div class="container">
-    <app-filters></app-filters>
+    <app-filters
+      [category]="selectedCategory"
+      [genre]="selectedGenre"
+      [platform]="selectedPlatform"
+      [term]="selectedTerm"
+      (onFilterChanged)="filterChanged($event)"
+    ></app-filters>
     <h2>Result:</h2>
     <app-game-list [gameList]="filtredGameList"></app-game-list>
   </div>

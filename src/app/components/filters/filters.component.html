@@ -23,6 +23,8 @@
                 type="radio"
                 name="platforms"
                 id="platform"
+                (change)="setSelectedPlatform(-1)"
+                [checked]="selectedPlatform == -1"
               />
               <label class="form-check-label" for="platform"> none </label>
             </div>
@@ -32,6 +34,8 @@
                 type="radio"
                 name="platforms"
                 id="platform{{ platform.id }}"
+                [checked]="selectedPlatform == platform.id"
+                (change)="setSelectedPlatform(platform.id)"
               />
               <label class="form-check-label" for="platform{{ platform.id }}">
                 {{ platform.title }}
@@ -46,6 +50,8 @@
                 type="radio"
                 name="categories"
                 id="category"
+                [checked]="selectedCategory == -1"
+                (change)="setSelectedCategory(-1)"
               />
               <label class="form-check-label" for="category"> none </label>
             </div>
@@ -55,6 +61,8 @@
                 type="radio"
                 name="categories"
                 id="platform{{ category.id }}"
+                [checked]="selectedCategory == category.id"
+                (change)="setSelectedCategory(category.id)"
               />
               <label class="form-check-label" for="platform{{ category.id }}">
                 {{ category.title }}
@@ -68,6 +76,8 @@
               type="radio"
               name="genres"
               id="genre"
+              [checked]="selectedGenre == -1"
+              (change)="setSelectedGenre(-1)"
             />
             <label class="form-check-label" for="genre"> none </label>
           </div>
@@ -77,6 +87,8 @@
               type="radio"
               name="genres"
               id="genre{{ genre.id }}"
+              [checked]="selectedGenre == genre.id"
+              (change)="setSelectedGenre(genre.id)"
             />
             <label class="form-check-label" for="genre{{ genre.id }}">
               {{ genre.title }}
