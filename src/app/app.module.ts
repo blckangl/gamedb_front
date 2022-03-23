@@ -15,6 +15,10 @@ import { FiltersComponent } from './components/filters/filters.component';
 import { FormsModule } from '@angular/forms';
 import { DashboardLayoutComponent } from './layouts/dashboard-layout/dashboard-layout.component';
 import { SideNavComponent } from './components/side-nav/side-nav.component';
+import { GameDashPageComponent } from './pages/dashboard/game-dash-page/game-dash-page.component';
+import { GenreDashPageComponent } from './pages/dashboard/genre-dash-page/genre-dash-page.component';
+import { CategoryDashPageComponent } from './pages/dashboard/category-dash-page/category-dash-page.component';
+import { PlatformDashPageComponent } from './pages/dashboard/platform-dash-page/platform-dash-page.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +33,10 @@ import { SideNavComponent } from './components/side-nav/side-nav.component';
     FiltersComponent,
     DashboardLayoutComponent,
     SideNavComponent,
+    GameDashPageComponent,
+    GenreDashPageComponent,
+    CategoryDashPageComponent,
+    PlatformDashPageComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
