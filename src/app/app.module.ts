@@ -13,6 +13,8 @@ import { GamePageComponent } from './pages/game-page/game-page.component';
 import { ResultPageComponent } from './pages/result-page/result-page.component';
 import { FiltersComponent } from './components/filters/filters.component';
 import { FormsModule } from '@angular/forms';
+import { DashboardLayoutComponent } from './layouts/dashboard-layout/dashboard-layout.component';
+import { SideNavComponent } from './components/side-nav/side-nav.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { FormsModule } from '@angular/forms';
     GamePageComponent,
     ResultPageComponent,
     FiltersComponent,
+    DashboardLayoutComponent,
+    SideNavComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
