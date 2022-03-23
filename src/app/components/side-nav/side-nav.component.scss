@@ -1,21 +1,32 @@
 #side-menu {
   background-color: #000000;
   height: 100vh;
-  width: 250px;
+  width: 90px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
+  transition: all 0.3s ease-out;
   .button-container {
     display: flex;
     justify-content: space-between;
-    width: 230px;
+    width: calc(100% - 10px);
     align-items: center;
     background-color: #212121;
     border-radius: 10px;
     padding: 16px;
     margin: 8px;
+    overflow: hidden;
+    cursor: pointer;
+
     i {
       font-size: 32px;
     }
   }
+  .button-container:hover {
+    background-color: #000a12;
+  }
+}
+.show {
+  width: 200px !important;
 }
