@@ -1,0 +1,39 @@
+.ibtn {
+  background-color: #102027;
+  color: white;
+  font-size: 24px;
+  padding: 4px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0px;
+}
+.toolbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  background-color: #424242;
+  padding: 8px;
+  border-radius: 4px;
+}
+.elements-container {
+  width: 100%;
+  height: 50px;
+  background-color: #424242;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+
+  .actions {
+    span {
+      margin-right: 4px;
+      cursor: pointer;
+    }
+  }
+}
